@@ -157,7 +157,8 @@ body {
 .profile {
   background-color: white;
   border-radius: 1em;
-  width: 85%;
+  width: 90%;
+  max-width: 21.9em;
   margin: 0 auto;
   overflow: hidden;
   font-family: var(--font-primary);
@@ -165,41 +166,88 @@ body {
 }
 
 .card__bio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 18em;
+}
+
+.card__bg {
+  background-image: url(./images/bg-pattern-card.svg);
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.card__info {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__name-age {
+  padding-top: 4em;
+  display: flex;
+  align-items: center;
 }
 
 .card__img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  align-self: center;
+  justify-self: center;
   border-radius: 5em;
-  border: solid 0.25em white;
+  border: solid 0.4em white;
   display: block;
 }
 
 .card__name {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .card__age {
-  font-size: 1.6rem;
+  padding-left: 0.5em;
+  font-size: 1.4rem;
   color: var(--primary-gray);
 }
 
 .card__location {
-  font-size: 1.2rem;
+  padding-top: 1em;
+  font-size: 1rem;
   color: var(--primary-gray);
 }
 
+.card__social {
+  margin-top: 1.5em;
+  border-top: 1px solid rgb(231, 231, 231);
+  padding: 2em 1.5em;
+}
+
+.card__social ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .card__social-numbers {
-  font-size: 1.8rem;
+  text-align: center;
+  font-size: 1.4rem;
   font-weight: 700;
+  grid-row: 1/2;
 }
 
 .card__social-details {
-  font-size: 1.1rem;
+  text-align: center;
+  font-size: 0.9rem;
   color: var(--primary-gray);
 }
 
 @media (min-width: 900px) {
   body {
-    background-position: top -100% left 0, bottom -100% right 0;
+    background-position: top -1500% left -10%, bottom -1500% right -10%;
   }
 }
